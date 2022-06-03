@@ -2,6 +2,7 @@
 using StockPriceAPI.Helpers;
 using StockPriceAPI.Models;
 using StockPriceAPI.Services.Contracts;
+using System.Text;
 using System.Text.Json;
 
 namespace StockPriceAPI.Services
@@ -26,7 +27,8 @@ namespace StockPriceAPI.Services
 
             try
             {
-                await _queueClient.SendMessageAsync(message);
+                var bytesMessage = UnicodeEncoding.UTF8.GetBytes(message);
+                await _queueClient.SendMessageAsync(Convert.ToBase64String(bytesMessage));
             }
             catch(Exception ex)
             {

@@ -21,10 +21,8 @@ namespace StockPriceFunctionApp
         }
 
         [FunctionName("StockPriceFunction")]
-        public async Task Run([QueueTrigger("anthill-demo-queue", Connection = "AzureWebJobsStorage")]string message, ILogger log)
+        public async Task Run([QueueTrigger("anthill-demo-queue", Connection = "AzureWebJobsStorage")] StockPriceQueueItem stockPriceQueueItem, ILogger log)
         {
-            var stockPriceQueueItem = JsonSerializer.Deserialize<StockPriceQueueItem>(message);
-
             var stockExchanged = _mapper.Map<StockExchanged>(stockPriceQueueItem);
 
             stockExchanged.DateTime = DateTime.UtcNow;

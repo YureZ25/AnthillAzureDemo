@@ -6,6 +6,8 @@ using StockPriceFunctionApp.Data.Mappings;
 using StockPriceFunctionApp.Data.Repositories;
 using StockPriceFunctionApp.Data.Repositories.Contracts;
 
+[assembly: FunctionsStartup(typeof(StockPriceFunctionApp.Startup))]
+
 namespace StockPriceFunctionApp
 {
     public class Startup : FunctionsStartup
