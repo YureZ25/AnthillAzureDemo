@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockPriceFunction", "StockPriceFunction\StockPriceFunction.csproj", "{210C73CD-5332-4C48-90F5-32C3FAC8EE28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockPriceAPI", "StockPriceAPI\StockPriceAPI.csproj", "{A2BBCED8-D95C-4D7F-A1CB-026B31BB91B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockPriceAPI", "StockPriceAPI\StockPriceAPI.csproj", "{A2BBCED8-D95C-4D7F-A1CB-026B31BB91B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockPriceFunctionApp", "StockPriceFunctionApp\StockPriceFunctionApp.csproj", "{C4074052-043A-4CDB-AE2D-1BF00ABF4A51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{210C73CD-5332-4C48-90F5-32C3FAC8EE28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{210C73CD-5332-4C48-90F5-32C3FAC8EE28}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{210C73CD-5332-4C48-90F5-32C3FAC8EE28}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{210C73CD-5332-4C48-90F5-32C3FAC8EE28}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A2BBCED8-D95C-4D7F-A1CB-026B31BB91B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2BBCED8-D95C-4D7F-A1CB-026B31BB91B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2BBCED8-D95C-4D7F-A1CB-026B31BB91B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2BBCED8-D95C-4D7F-A1CB-026B31BB91B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4074052-043A-4CDB-AE2D-1BF00ABF4A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4074052-043A-4CDB-AE2D-1BF00ABF4A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4074052-043A-4CDB-AE2D-1BF00ABF4A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4074052-043A-4CDB-AE2D-1BF00ABF4A51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

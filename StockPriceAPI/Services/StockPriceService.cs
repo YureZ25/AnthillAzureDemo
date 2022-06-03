@@ -22,16 +22,18 @@ namespace StockPriceAPI.Services
 
         public async Task AddStockPriceChangingToQueue(StockExchangedModel stockExchangedModel)
         {
-            // в стартап
-            if (!await _queueClient.ExistsAsync())
+            var message = JsonSerializer.Serialize(stockExchangedModel);
+
+            try
             {
-                await _queueClient.CreateIfNotExistsAsync();
-                _logger.LogError("Queue doesn't exist, create it");
+                await _queueClient.SendMessageAsync(message);
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError("Message wasn't send to queue. Error message: " + ex.Message, ex);
             }
 
-            string message = JsonSerializer.Serialize(stockExchangedModel);
-
-            await _queueClient.SendMessageAsync(message);
+            _logger.LogInformation($"Message for stock {stockExchangedModel.TickerSymbol} was send to queue");
         }
     }
 }

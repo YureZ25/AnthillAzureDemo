@@ -1,3 +1,5 @@
+using Azure.Storage.Queues;
+using StockPriceAPI.Helpers;
 using StockPriceAPI.Services;
 using StockPriceAPI.Services.Contracts;
 
@@ -11,6 +13,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Create queue if not exist
+var queueClient = new QueueClient(builder.Configuration[QueueConstaints.QueueConnectionString], builder.Configuration[QueueConstaints.QueueName]);
+queueClient.CreateIfNotExists();
 
 var app = builder.Build();
 
